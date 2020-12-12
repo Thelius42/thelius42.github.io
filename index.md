@@ -58,7 +58,7 @@ function delete_user(studentID ){
 }
 </script>
 ```
-The end result of this part of the functionality can be viewed at [maintainStudents](http://ianmloney.com/maintainStudents.php)
+The end result of this part of the functionality can be viewed at [maintainStudents](http://ianmloney.com/maintainStudent.php)
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
