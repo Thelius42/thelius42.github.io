@@ -3,6 +3,9 @@ This portfolio outlines a student registration portal for a fictional college ca
 
 For reference, the full code can be viewed on [my GitHub portal](https://github.com/Thelius42/studentRegistrationPortal)
 
+### Professional Self Assessment
+
+
 ### Phase 1
 
 For the first phase of this project, I developed and planned the setup.  The setup was based on a design from a college course, where we had planned a student registration portal.  I decided to build that planned project from scratch for this portfolio.  The question was in how to approach it from a coding perspective.  
