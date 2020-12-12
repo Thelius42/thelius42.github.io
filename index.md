@@ -25,7 +25,7 @@ For an example of how the look came out, the site is published at [ianmloney.com
 
 ### Phase 2
 
-For the second phase, I focused on the administrative pages of the site.  I created a page for modifying each of the classes and students tables.  Upon launch, the entries for each table are listed.  This is using php to pull a basic GET query on the table and listing the contents in a bootstrap table output. Below is the table syntax code:
+For the second phase, I focused on the administrative pages of the site.  I created a page for modifying each of the classes and students tables.  Upon launch, the entries for each table are listed.  This is using php to pull a basic GET query on the table and listing the contents in a bootstrap table output. Below is the table syntax code and a screenshot of the result:
 
 ```markdown
 echo "<tr>";
@@ -41,6 +41,7 @@ echo "<tr>";
 	echo "</tr>";
 
 ```
+![updateStudentTable](updateStudentTable.png)
 The table includes buttons for each printout for update and delete functions.  The update links to a page with form fields to update the entries for that student.  The delete pops a confirmation dialog javascript, that upon acceptance runs a deleteStudent php scrip that deletes the record from the database.
 
 
