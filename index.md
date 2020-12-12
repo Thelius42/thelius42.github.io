@@ -28,30 +28,37 @@ For an example of how the look came out, the site is fully published at http://i
 For the second phase, I focused on the administrative pages of the site.  I created a page for modifying each of the classes and students tables.  Upon launch, the entries for each table are listed.  This is using php to pull a basic GET query on the table and listing the contents in a bootstrap table output. Below is the table syntax code:
 
 ```markdown
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?studentID={$studentID}");?>" method="post">
-	<table class='table table-hover table-responsive table-bordered'>
-		<tr>
-			<td>Last Name</td>
-			<td><input type='text' name='lastName' value="<?php echo htmlspecialchars($lastName, ENT_QUOTES);  ?>" class='form-control' /></td>
-		</tr>
-		<tr>
-			<td>First Name</td>
-			<td><textarea name='firstName' class='form-control'><?php echo htmlspecialchars($firstName, ENT_QUOTES);  ?></textarea></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-				<input type='submit' value='Save Changes' class='btn btn-primary'/>&nbsp &nbsp
-				<a href='maintainStudent.php' class='btn btn-default'>Return to Maintain Students  </a>&nbsp &nbsp
-				<a href='index.html' class='btn btn-danger'>Back to Main Menu</a>
-			</td>
-		</tr>
-	</table>
-</form>
+	echo "<tr>";
+		echo "<td>{$studentID}</td>";
+		echo "<td>{$lastName}</td>";
+		echo "<td>{$firstName}</td>";
+        echo "<td>";
+			// Button to update the student record
+            echo "<a href='updateStudent.php?studentID={$studentID}' class='btn btn-primary m-r-1em'>Update</a> &nbsp &nbsp" ;
+            // Button to delete the student record
+            echo "<a href='#' onclick='delete_user({$studentID});'  class='btn btn-danger'>Delete</a>";  
+		echo "</td>";
+		echo "</tr>";
 
 ```
+The table includes buttons for each printout for update and delete functions.  The update links to a page with form fields to update the entries for that student.  The delete pops a confirmation dialog javascript, that upon acceptance runs a deleteStudent php scrip that deletes the record from the database.
 
 
+```markdown
+<script type='text/javascript'>
+// confirm record deletion
+function delete_user(studentID ){
+	
+	var answer = confirm('Are you sure?');
+	if (answer){
+		// if user clicked ok, 
+		// pass the Student id to delete.php and execute the delete query
+		window.location = 'deleteStudent.php?studentID=' + studentID;
+	} 
+}
+</script>
+```
+The end result of this part of the functionality can be viewed at [http://ianmloney.com/maintainStudents.php]
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
