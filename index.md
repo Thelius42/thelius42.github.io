@@ -16,8 +16,8 @@ Below is a sample of some of that bootstrap code at work:
 ```markdown
 This code sets up the button clicks on the main page
 
-      <a href='getClasses.php' class ="btn btn-primary"> Register for a Class</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      <a href='viewRegistered.php' class ="btn btn-primary"> View Registered Classes</a> 
+<a href='getClasses.php' class ="btn btn-primary"> Register for a Class</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a href='viewRegistered.php' class ="btn btn-primary"> View Registered Classes</a> 
 
 ```
 
@@ -28,17 +28,17 @@ For an example of how the look came out, the site is published at [ianmloney.com
 For the second phase, I focused on the administrative pages of the site.  I created a page for modifying each of the classes and students tables.  Upon launch, the entries for each table are listed.  This is using php to pull a basic GET query on the table and listing the contents in a bootstrap table output. Below is the table syntax code:
 
 ```markdown
-	echo "<tr>";
-		echo "<td>{$studentID}</td>";
-		echo "<td>{$lastName}</td>";
-		echo "<td>{$firstName}</td>";
-        echo "<td>";
-			// Button to update the student record
-            echo "<a href='updateStudent.php?studentID={$studentID}' class='btn btn-primary m-r-1em'>Update</a> &nbsp &nbsp" ;
-            // Button to delete the student record
-            echo "<a href='#' onclick='delete_user({$studentID});'  class='btn btn-danger'>Delete</a>";  
-		echo "</td>";
-		echo "</tr>";
+echo "<tr>";
+	echo "<td>{$studentID}</td>";
+	echo "<td>{$lastName}</td>";
+	echo "<td>{$firstName}</td>";
+   echo "<td>";
+// Button to update the student record
+   echo "<a href='updateStudent.php?studentID={$studentID}' class='btn btn-primary m-r-1em'>Update</a> &nbsp &nbsp" ;
+   // Button to delete the student record
+     echo "<a href='#' onclick='delete_user({$studentID});'  class='btn btn-danger'>Delete</a>";  
+    	echo "</td>";
+	echo "</tr>";
 
 ```
 The table includes buttons for each printout for update and delete functions.  The update links to a page with form fields to update the entries for that student.  The delete pops a confirmation dialog javascript, that upon acceptance runs a deleteStudent php scrip that deletes the record from the database.
@@ -47,8 +47,7 @@ The table includes buttons for each printout for update and delete functions.  T
 ```markdown
 <script type='text/javascript'>
 // confirm record deletion
-function delete_user(studentID ){
-	
+function delete_user(studentID ){	
 	var answer = confirm('Are you sure?');
 	if (answer){
 		// if user clicked ok, 
