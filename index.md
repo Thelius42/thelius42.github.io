@@ -1,7 +1,10 @@
 ## Student Registration Portal  
 This portfolio outlines a student registration portal for a fictional college called Loney University.  The portal contains the critical elements to register for a class, including a database consisting of the registered students and the available courses for registration.  Functionality has been built, using mySQL and PHP, to register for classes and view registrations once they have been made.  There have also been admin pages added to perform general CRUD operations on the student and class tables via an html interface.  
 
+The portfolio began with a code review, which in this case outlines a false start I encountered at the beginning of this development process.  That can be viewed [here](Ian_Loney_Milestone_1.avi)
+
 For reference, the full code can be viewed on [my GitHub portal](https://github.com/Thelius42/studentRegistrationPortal)
+
 
 ### Professional Self Assessment
 
