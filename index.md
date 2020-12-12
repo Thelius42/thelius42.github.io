@@ -77,4 +77,22 @@ CREATE TABLE class_student (
 ```
 Below are screenshots of both a failed registration due to duplicate entry and a successful registration.  Full functionality can be viewed at [the registration page](http://ianmloney.com/getClasses.php).
 
-![
+![duplicateReg](dupReg.png)
+
+![successfulReg](successfulReg.png)
+
+Finally we have the page to view final registered classes.  This page also includes a form field to enter a student ID.  Once the student ID is verified as existing, a query is run with an INNER JOIN on the classes table to pull the class info related to that student.  Below is the code for the SQL query from the site
+
+```markdown
+       $query = "SELECT classes.classID, classes.className, classes.classDescription, classes.timeOfClass, class_student.studentID
+       FROM classes
+       INNER JOIN class_student ON class_student.classID = classes.classID            
+       WHERE class_student.studentID = :studentID ";
+       $stmt = $con->prepare($query);
+
+       $studentID=htmlspecialchars(strip_tags($_POST['studentID']));
+       $stmt->bindParam(':studentID', $studentID);
+            $stmt->execute();
+```
+
+The :studentID represents the student ID entered in the earlier code.  The table output is a look similar to the tables produced in other sections of the site.  Functionality can be seen at the [view registered site](http://ianmloney.com/viewRegistered.php).  For student IDs, they are listed on the maintain students page.
