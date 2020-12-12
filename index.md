@@ -21,7 +21,7 @@ This code sets up the button clicks on the main page
 
 ```
 
-For an example of how the look came out, the site is published at [ianmloney.com](http://ianmloney.com and is fully functional.
+For an example of how the look came out, the site is published at [ianmloney.com](http://ianmloney.com) and is fully functional.
 
 ### Phase 2
 
