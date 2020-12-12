@@ -7,13 +7,17 @@ For reference, the full code can be viewed on [my GitHub portal](https://github.
 
 
 ### Professional Self Assessment
+This portfolio is in part a culmination of my work between community college and Southern New Hampshire University.  It includes aspects of programming learned at both institutions. This includes the basic web development with html and javascript, as well as the more advanced concepts of algorithm development learned in the latter stages at the University.  I think this portal is a fair representative of a large aspect of what I have learned in this program.
 
+I am part of the class of 2020, a year that will be forever marked for its unique challenges.  The fully online aspect of SNHU's curriculum was the only thing that made finishing this year possible. That said, completing any sort of STEM program completely online is not for the faint of heart.  The loss of direct instructor interaction was a constant problem, but it helped to develop a level of self-reliance that I think is on full display in this project.
+
+The reason I say this is prior to this project I have never coded in php and never built a web-based interface with SQL.  These are all skills I taught myself over the 5 weeks of development.  This 
 
 ### Phase 1
 
-For the first phase of this project, I developed and planned the setup.  The setup was based on a design from a college course, where we had planned a student registration portal.  I decided to build that planned project from scratch for this portfolio.  The question was in how to approach it from a coding perspective.  
+For the first phase of this project, I developed and planned the setup.  The setup was based on a design from a college course, where we had planned a student registration portal.  I decided to develop that planned project from the ground up for this portfolio.  The main problem was the in the approach from a coding perspective.  
 
-In the end, I decided to code it in PHP with a mySQL database.  For the look and feel of the overall site, I decided to use jquery and bootstrap styling rules for the look of the buttons and the alerts in particular.  Once I had settled on this layout, I built the database and the basic index.html home page for the site, as well as got a localhost webserver up and running on my workstation.
+In the end, I decided to code it in PHP with a mySQL database.  For the look and feel of the overall site, I decided to use jquery and bootstrap styling rules for the look of the buttons and the alerts in particular.  Once I had settled on this layout, I built the database and the basic index.html home page for the site, as well as  a localhost webserver on my workstation for testing.
 
 Below is a sample of some of that bootstrap code at work:
 
@@ -26,8 +30,9 @@ This code sets up the button clicks on the main page
 <a href='viewRegistered.php' class ="btn btn-primary"> View Registered Classes</a> 
 
 ```
+Finally, I added the first bit of database interaction.  A form field entry to add a new entry to both the class and student database lists.  Upon submit on each form, a new entry i added to the specified table.  The example from the classes table is [linked here](http://ianmloney.com/createClass.php).
 
-For an example of how the look came out, the site is published at [ianmloney.com](http://ianmloney.com) and is fully functional.  A narrative written during the development of this artifact can be viewed [here](narrative1.md)
+For an example of the overall layout, the site is published at [ianmloney.com](http://ianmloney.com) and is fully functional.  A narrative written during the development of this artifact can be viewed [here](narrative1.md).
 
 ### Phase 2
 
@@ -64,7 +69,7 @@ function delete_user(studentID ){
 }
 </script>
 ```
-The end result of this part of the functionality can be viewed at the [maintainStudents](http://ianmloney.com/maintainStudent.php) page on the site.  A narrative written during the development of this artifact can be viewed [here](narrative2.md)
+The end result of this part of the functionality can be viewed at the [maintainStudents](http://ianmloney.com/maintainStudent.php) page on the site.  A narrative written during the development of this artifact can be viewed [here](narrative2.md).
 
 ### Phase 3
 
@@ -101,4 +106,4 @@ $stmt->bindParam(':studentID', $studentID);
 $stmt->execute();
 ```
 
-The :studentID represents the student ID entered in the earlier code.  The table output is a look similar to the tables produced in other sections of the site.  Functionality can be seen at the [view registered site](http://ianmloney.com/viewRegistered.php).  For student IDs, they are listed on the maintain students page.  A narrative written during the development of this artifact can be viewed [here](narrative3.md)
+The :studentID represents the student ID entered in the earlier code.  The table output is a look similar to the tables produced in other sections of the site.  Functionality can be seen at the [view registered site](http://ianmloney.com/viewRegistered.php).  Student ID's, if needed can be found [here](http://ianmloney.com/maintainStudents.php).  A narrative written during the development of this artifact can be viewed [here](narrative3.md).
