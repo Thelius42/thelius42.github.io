@@ -1,6 +1,6 @@
-##Narrative for Phase 1
+## Narrative for Phase 1
 
-THis narrative was written at the time of the code development
+This narrative was written at the time of the code development
 
   For this artifact I am presenting the foundation of my student registration portal.  What has been constructed is a php based MySQL database consisting of 3 tables; one for students, one for classes, and a joined table for registered classes by student.  Accompanying this I have built an html home page with buttons for various functions.  Two of the buttons, the ones to create new student or class entries, take you to php pages I have built to accomplish these two functions.  The create pages both properly upload the entered data to the database.  I am uploading the entirety of the site’s code so far into this submission and will am including some screenshots of the site output here as the database and php code will not work with my local settings.
 	Overall, I think it is off to a good start.  It effectively showed off my skills in creating and updating an SQL database, writing a php api to the database, and writing the html and css code to present it all.  I have also demonstrated some basic security skills by keeping the database configs in another file not located in the source code as it has login information.  This is not apparent in the code, but I have also restricted the user in the database config to only be able to update this database and not others on my database server.  The database config file as well as the basic SQL to build the database are included in the config folder in the submission.
