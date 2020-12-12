@@ -27,7 +27,7 @@ This code sets up the button clicks on the main page
 
 ```
 
-For an example of how the look came out, the site is published at [ianmloney.com](http://ianmloney.com) and is fully functional.  The original narrative for this section is located [here](narrative1.md)
+For an example of how the look came out, the site is published at [ianmloney.com](http://ianmloney.com) and is fully functional.  A narrative written during the development of this artifact can be viewed [here](narrative1.md)
 
 ### Phase 2
 
@@ -64,7 +64,7 @@ function delete_user(studentID ){
 }
 </script>
 ```
-The end result of this part of the functionality can be viewed at the [maintainStudents](http://ianmloney.com/maintainStudent.php) page on the site.
+The end result of this part of the functionality can be viewed at the [maintainStudents](http://ianmloney.com/maintainStudent.php) page on the site.  A narrative written during the development of this artifact can be viewed [here](narrative2.md)
 
 ### Phase 3
 
@@ -101,4 +101,4 @@ $stmt->bindParam(':studentID', $studentID);
 $stmt->execute();
 ```
 
-The :studentID represents the student ID entered in the earlier code.  The table output is a look similar to the tables produced in other sections of the site.  Functionality can be seen at the [view registered site](http://ianmloney.com/viewRegistered.php).  For student IDs, they are listed on the maintain students page.
+The :studentID represents the student ID entered in the earlier code.  The table output is a look similar to the tables produced in other sections of the site.  Functionality can be seen at the [view registered site](http://ianmloney.com/viewRegistered.php).  For student IDs, they are listed on the maintain students page.  A narrative written during the development of this artifact can be viewed [here](narrative3.md)
