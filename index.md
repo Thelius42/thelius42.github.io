@@ -58,7 +58,23 @@ function delete_user(studentID ){
 }
 </script>
 ```
-The end result of this part of the functionality can be viewed at [maintainStudents](http://ianmloney.com/maintainStudent.php)
-### Support or Contact
+The end result of this part of the functionality can be viewed at the [maintainStudents](http://ianmloney.com/maintainStudent.php) page on the site.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Phase 3
+
+The final phase of this project included the registration functionality of the site as well as the ability to view classes once registered.  This involved building a list of classes similar to the maintain list in the previous phase, but this time linking out to a page to register for the class.  The class ID is carried over as a variable input, then a form asks for the student ID.  The registration page then checks if the student ID exists in the table, returning an error if it does not.  If it exists but the class is already registered, it will return an error as well.  Otherwise the registration is entered.
+
+The way this was accomplished was by creating a third SQL database table consisting of student ID's and class ID's only.  This table has a parameter in its SQL code only allowing for unique entries as shown:
+
+```markdown
+CREATE TABLE class_student (
+	regID int AUTO_INCREMENT,
+	studentID int NOT NULL,
+	classID varchar(5) NOT NULL,
+	PRIMARY KEY (regID)
+	CONSTRAINT Uniq_reg UNIQUE (studentID, classID)
+);
+```
+Below are screenshots of both a failed registration due to duplicate entry and a successful registration.  Full functionality can be viewed at [the registration page](http://ianmloney.com/getClasses.php).
+
+![
